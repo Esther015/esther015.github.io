@@ -9,7 +9,7 @@
         <!--ШАПКА-->
         <header>
             <div class="logo-container">
-                <img scr="logo.png" atl="Логотип" class="round-logo">
+                <img scr="logo.png" atl="Логотип" class="logo"/>
             </div>
             <div class="header-center">
                 <h1> Задача 2 </h1>
@@ -51,51 +51,53 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Петров</td>
-                    <td>Дмитрий</td>
-					<td>Иванович</td>
-                    <td>14.05.2007</td>
+                    <td>Иванов</td>
+                    <td>Алексей</td>
+					<td>Петрович</td>
+                    <td>15.03.1985</td>
 					<td>Муж</td>
+                    
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Иванов</td>
-                    <td>Елена</td>
-					<td>Петровна</td>
-                    <td></td>
+                    <td>Смирнова</td>
+                    <td>Екатерина</td>
+					<td>Сергеевна</td>
+                    <td>30.01.1998</td>
 					<td>Жен</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Соколов</td>
-                    <td></td>
-					<td></td>
-                    <td></td>
+                    <td>Кузнецов</td>
+                    <td>Дмитрий</td>
+					<td>Иванрвич</td>
+                    <td>11.19.1982</td>
 					<td>Муж</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Смирнов</td>
-                    <td></td>
-					<td></td>
-                    <td></td>
+                    <td>Попова</td>
+                    <td>Олга</td>
+					<td>Викторовна</td>
+                    <td>22.07.1992</td>
 					<td>Жен</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td></td>
-                    <td></td>
-					<td></td>
-                    <td></td>
+                    <td>Соколов</td>
+                    <td>Михаил</td>
+					<td>Повлович</td>
+                    <td>04.11.1978</td>
 					<td >Муж</td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td></td>
-                    <td></td>
-					<td></td>
-                    <td></td>
+                    <td>Волкова</td>
+                    <td>Анна</td>
+					<td>Александровна</td>
+                    <td>25.05.1990</td>
 					<td>Жен</td>
+                    
                 </tr>
                 </table>
              </section>
@@ -127,26 +129,24 @@
                     </label><br />
 
                     <label>
-                        Город посетил:<br />
-                        <select name="field-name-4[]"
-                            multiple="multiple">
-                            <option value="Значение1">Лондон, Индонезия</option>
-                            <option value="Значение2" selected="selected">Дувай, Объединенные Арабиские Эмираты</option>
-                            <option value="Значение3" selected="selected">Париж, Франция</option>
-		                    <option value="Значение4" selected="selected">Рим, Италия</option>
-		                    <option value="Значение5" selected="selected">Марракеш, Марокко</option>
-		                    <option value="Значение6" selected="selected">Бали, Индонезия</option>
-		                    <option value="Значение7" selected="selected">Бангкокб, Таиланд</option>
-		                    <option value="Значение8" selected="selected">Крит, Греция</option>
-                        </select>
-                    </label><br />
-
-                    Любимое блюдо дня <br/>
-                    <label>
-                        <input type="radio" checked="checked"
+                        Пол:<br />
+                        <label><input type="radio" checked="checked"
                         name="radio-group-1" value="Значение1" />
-                        Завтрак
+                        женский
                     </label>
+                    <label><input type="radio"
+                        name="radio-group-1" value="Значение2" />
+                        мужской
+                    </label><br />
+                        Подпись:<br />
+                    <label><input type="checkbox" checked="checked"
+                        name="check-1" />
+                        С контрактом ознакомлен (а)
+                    </label><br />
+                        Если вы готовы, то нажмите сохранить:
+                        <input type="submit" value="Сохранить" />
+                    </label>
+
                     <label>
                         <input type="radio"
                         name="radio-group-1" value="Значение2" />
@@ -169,4 +169,3 @@
         </main>
     </body>
 </html>
-
