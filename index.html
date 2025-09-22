@@ -1,106 +1,171 @@
-
-<ul> 
- <li><a href="http://kubsu.ru/">КубГУ</a></li> 
- <li><a href="https://kubsu.ru/">КубГУ</a></li> 
- <li><a href="http://kubsu.ru/"><img src="image.jpg" alt="Цветок" style="width: 600px;" /></a></li> 
-<li><a href="/kubsu.ru">КубГУ</a> </li>
-<li> <a href= "#myId"> Kubsu </a> </li>
-<p id=" myId"> myId </p>
- 
-</ul>
-
 <!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Задача 2</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--ШАПКА-->
+        <header>
+            <div class="logo-container">
+                <img scr="logo.png" atl="Логотип" class="round-logo">
+            </div>
+            <div class="header-center">
+                <h1> Задача 2 </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#list-selection">Список гипессылок</a></li>
+                    <li><a href="#table-selection">Таблица</a></li>
+                    <li><a href="#form-section">Форма</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<html>
+        <main>
+             <section>
+                <section id="list-section">
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li><a href="http://kubsu.ru/">КубГУ</a></li>
+                <li><a href="https://kubsu.ru/">КубГУ</a></li>
+                <li><a href="https://kubsu.ru/"><img src="image.jpg" alt="Цветок" style="width: 600px;"/></a></li>
+                <li><a href="/index.html">главная</a></li>
+                <li><a href="/image.jpg">внутренняя</a></li>
+                <li id = "myid"><a href="#myid">текущий фрагмент</a></li>
 
-  <head>
-    <title>Пример формы HTML</title>
-  </head>
+            </ul>
+             </section>
 
-  <body>
+             <section id="table-section">
+                <h2>Таблица</h2>
+                <table>
+                    <tr>
+                    <th>№</th>
+                    <th>Фамилия</th>
+                    <th>Имя</th>
+					<th>Отчество</th>
+                    <th>Дата рождения</th>
+                    <th>Пол</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+					<td>Муж</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+					<td>Жен</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+					<td>Муж</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+					<td>Жен</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+					<td >Муж</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+					<td>Жен</td>
+                </tr>
+                </table>
+             </section>
+             <section id="form-section">
+                <h2>Форма</h2>
+                <form action="/" method="post">
+                    <label>
+                         ФИО:<br/>
+                         <input name="field-name-1" value="Ивано Мария Петровна" />
+                    </label><br />
+                    <label>
+                         Номер телефона:<br />
+                        <input name="phone" value="+7-991-292-00-00" type="tel" placeholder="+79998543251" />
+                    </label><br />
 
-    <h1>Пример формы HTML</h1>
+                    <label>
+                        Почта:<br />
+                        <input name="field-email" value="masha00@gmail.com" type="email" />
+                    </label><br />
 
-    <form action="/"
-      method="POST">
+                    <label>
+                         Дата рождения:<br />
+                        <input name="field-date" value="2000-01-01" type="date" />
+                    </label><br />
 
-      <label>
-        Впишите ФИО:<br />
-        <input name="field-name-1"
-          value="ФИО" 
-		  placeholder="Введитеваши почту" />
-      </label><br />
+                    <label>
+                        Хобби:<br />
+                        <textarea name="field-name-2">Путешествовать</textarea>
+                    </label><br />
 
-      <label>
-        Впишите номер телефона :<br />
-        <input name="phone"
-          type="tel"
-          placeholder="+79912826818" />
-      </label><br />
-	  <label>
-		Впишите поле email :<br />
-		<input name ="field-email"
-			type="email"
-			placeholder="jhir@gmail.com" />
-		</label><br />
+                    <label>
+                        Город посетил:<br />
+                        <select name="field-name-4[]"
+                            multiple="multiple">
+                            <option value="Значение1">Лондон, Индонезия</option>
+                            <option value="Значение2" selected="selected">Дувай, Объединенные Арабиские Эмираты</option>
+                            <option value="Значение3" selected="selected">Париж, Франция</option>
+		                    <option value="Значение4" selected="selected">Рим, Италия</option>
+		                    <option value="Значение5" selected="selected">Марракеш, Марокко</option>
+		                    <option value="Значение6" selected="selected">Бали, Индонезия</option>
+		                    <option value="Значение7" selected="selected">Бангкокб, Таиланд</option>
+		                    <option value="Значение8" selected="selected">Крит, Греция</option>
+                        </select>
+                    </label><br />
 
-      <label>
-        Дфтф рождения :<br />
-        <input name="field-date"
-          value="2019-08-13"
-          type="date" />
-      </label><br />
+                    Любимое блюдо дня <br/>
+                    <label>
+                        <input type="radio" checked="checked"
+                        name="radio-group-1" value="Значение1" />
+                        Завтрак
+                    </label>
+                    <label>
+                        <input type="radio"
+                        name="radio-group-1" value="Значение2" />
+                        Обед
+                    </label><br />
+                    <label>
+                        <input type="radio"
+                        name="radio-group-1" value="Значение3" />
+                        Ухин
+                    </label><br />
 
-      <label>
-        Многострочное текстовое поле:<br />
-        <textarea name="field-name-2">начальное значение</textarea>
-      </label><br />
+                    <footer>
+                        <p>&copy; Мария Петровна</p>
+                    </footer>
 
-      <label>
-        Список (combobox):<br />
-        <select name="field-name-3">
-          <option value="Значение1">Метка1</option>
-          <option value="Значение2" selected="selected">Метка2</option>
-          <option value="Значение3">Метка3</option>
-        </select>
-      </label><br />
-
-      <label>
-        Список (listbox с множественным выбором):
-        <br />
-        <select name="field-name-4[]"
-          multiple="multiple">
-          <option value="Значение1">Метка1</option>
-          <option value="Значение2" selected="selected">Метка2</option>
-          <option value="Значение3" selected="selected">Метка3</option>
-        </select>
-      </label><br />
-
-      Радиокнопки:<br />
-      <label><input type="radio" checked="checked"
-        name="radio-group-1" value="Значение1" />
-        Подпись радиокнопки 1</label>
-      <label><input type="radio"
-        name="radio-group-1" value="Значение2" />
-        Подпись радиокнопки 2</label><br />
-
-      Чекбокс:<br />
-      <label><input type="checkbox" checked="checked"
-        name="check-1" />
-        Подпись чекбокса ставим справа</label><br />
-
-      Кнопка отправки формы,
-      при нажатии заполненные в форму данные
-      отправятся в формате urlencoded методом
-      POST или GET по адресу URL_отправки_данных:
-      <input type="submit" value="Отправить" />
-    </form>
-
-  </body>
-
-</html> 
-
-
-<ul>
- <
-</ul>
+                </form>
+             </section>
+                
+            
+        </main>
+    </body>
+</html>
