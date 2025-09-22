@@ -31,7 +31,7 @@ header nav {
     align-items: center;
     gap: 20px;
     padding: 15px;
-    background-color: #67d7d7;
+    background-color: #4e5c5c;
 }
 .round-logo {
     width: 80px;
@@ -39,7 +39,7 @@ header nav {
     max-width: none;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #67d7d7;
+    border: 3px solid #a4baba;
 }
 .logo-img {
     background-color: #67d7d7;
