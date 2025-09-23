@@ -8,9 +8,7 @@
     <body>
         <!--ШАПКА-->
         <header>
-            <div class="logo-container">
-                <img scr="logo.png" atl="Логотип" class="logo"/>
-            </div>
+            <img id="logo-container" src="logosite.png" alt="Логотип" />
             <div class="header-center">
                 <h1> Задача 2 </h1>
             </div>
@@ -25,7 +23,7 @@
 
         <main>
              <section>
-                <section id="list-section">
+                <section id="list-selection">
             <h2>Список гиперссылок</h2>
             <ul>
                 <li><a href="http://kubsu.ru/">КубГУ</a></li>
@@ -35,13 +33,12 @@
                 <li><a href="/image.jpg">внутренняя</a></li>
                 <li id = "myid"><a href="#myid">текущий фрагмент</a></li>
                 <li><a href="https://yandex.com/search/?text=%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8&lr=10466&msid=1758561086688377-10843530252929433515-balancer-l7leveler-kubr-yp-sas-85-BAL&search_source=yacom_desktop_common&suggest_reqid=729433515175856108610900125985961">
-					Туристические города России
-				</a></li>
+					Туристические города России </a></li>
 
             </ul>
              </section>
 
-             <section id="table-section">
+             <section id="table-selection">
                 <h2>Таблица</h2>
                 <table>
                     <tr>
@@ -125,42 +122,42 @@
                          Дата рождения:<br />
                         <input name="field-date" value="2000-01-01" type="date" />
                     </label><br />
-
                     <label>
-                        Хобби:<br />
-                        <textarea name="field-name-2">Путешествовать</textarea>
+                        Любимый язык программирования:
+                        <br />
+                        <select name="field-name-4[]"
+                            multiple="multiple">
+                            <option value="Значение1">Pascal</option>
+                            <option value="Значение2" selected="selected">C</option>
+                            <option value="Значение3" selected="selected">C++</option>
+		                    <option value="Значение4" selected="selected">JavaScript</option>
+		                    <option value="Значение5" selected="selected">PHP</option>
+		                    <option value="Значение6" selected="selected">Python</option>
+		                    <option value="Значение7" selected="selected">Java</option>
+		                    <option value="Значение8" selected="selected">Haskel</option>
+		                    <option value="Значение9" selected="selected">Clojure</option>
+		                    <option value="Значение10" selected="selected">Prolog</option>
+		                    <option value="Значение11" selected="selected">Scala</option>
+                        </select>
                     </label><br />
-
+                        Пол: <br />
                     <label>
-                        Пол:<br />
-                        <label><input type="radio" checked="checked"
+                        <input type="radio" checked="checked"
                         name="radio-group-1" value="Значение1" />
                         женский
                     </label>
-                    <label><input type="radio"
+                        <label><input type="radio"
                         name="radio-group-1" value="Значение2" />
                         мужской
                     </label><br />
-                        Подпись:<br />
+                    Подпись:<br />
                     <label><input type="checkbox" checked="checked"
                         name="check-1" />
-                        С контрактом ознакомлен (а)
-                    </label><br />
+                        С контрактом ознакомлен (а)</label><br />
+
                         Если вы готовы, то нажмите сохранить:
                         <input type="submit" value="Сохранить" />
                     </label>
-
-                    <label>
-                        <input type="radio"
-                        name="radio-group-1" value="Значение2" />
-                        Обед
-                    </label><br />
-                    <label>
-                        <input type="radio"
-                        name="radio-group-1" value="Значение3" />
-                        Ухин
-                    </label><br />
-
                     <footer>
                         <p>&copy; Мария Петровна</p>
                     </footer>
@@ -172,6 +169,3 @@
         </main>
     </body>
 </html>
-
-
-
