@@ -11,7 +11,7 @@ body {
 }
 .header-center h1{
     margin: 0%;
-    font-size: 24px;
+    font-size: 35px;
     white-space: nowrap;
 }
 header {
@@ -21,17 +21,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative; /* Добавьте это */
+    position: relative; 
 }
 header nav {
     margin-left: auto;
+    font-size: 15px;
 }
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 15px;
-    background-color: #4e5c5c;
+#logo-container {
+    width: 80px; 
+    height: 80px;
+    border-radius: 150%;
+    object-fit: cover;
 }
 .round-logo {
     width: 80px;
@@ -103,5 +103,24 @@ footer {
     background: #5edec9;
     color: rgb(0, 0, 0);
     text-align: center;
-    padding: 15px;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: 100vw;
+    width: 100vw;
 }
