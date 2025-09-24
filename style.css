@@ -67,6 +67,15 @@ main {
     display: flex;
     flex-direction: column;
 }
+#list-section   {
+    order: 1;
+}
+#table-section {
+    order: 2;
+}
+#form-section {
+    order: 3;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -144,3 +153,4 @@ footer {
     }
  }
  
+
