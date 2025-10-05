@@ -62,8 +62,7 @@ header .navbar-toggler-icon {
     }
     
     header .d-flex {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
     }
     
     header .round-logo {
@@ -81,4 +80,5 @@ header .navbar-toggler-icon {
     .btn {
         display: none !important;
     }
+
 }
