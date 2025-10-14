@@ -1,165 +1,244 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <title>Задача 4</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <img id="logo-container" src="logosite.png" alt="Логотип" />
-            <div class="header-center">
-                <h1> Задача 4 </h1>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 4 - Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec la structure demandée -->
+    <header class="bg-primary text-white">
+        <div class="container-fluid">
+            <div class="row d-flex mx-sm-3">
+                <!-- Colonne principale (contenu) -->
+                <div class="col-md-9 order-2 px-sm-3">
+                    <div class="h-100 py-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <img src="logosite.png" alt="Логотип" class="round-logo me-3">
+                            <div class="flex-grow-1 text-center">
+                                <h1 class="h4 mb-0">Задача 4</h1>
+                            </div>
+                            <nav class="navbar navbar-expand-md ms-3">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                                        aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white" href="#list-section">Список гипессылок</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white" href="#table-section">Таблица</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white" href="#form-section">Форма</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#list-section">Список гипессылок</a></li>
-                    <li><a href="#table-section">Таблица</a></li>
-                    <li><a href="#form-section">Форма</a></li>
-                </ul>
-            </nav>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <!--Liste des liens hypertextes-->
-            <section id="list-section">
-                <h2>Список гиперссылок</h2>
-                <ul>
-                <li><a href="http://kubsu.ru/">КубГУ</a></li>
-                <li><a href="https://kubsu.ru/">КубГУ</a></li>
-                <li><a href="https://kubsu.ru/"><img src="image.jpg" alt="Цветок" style="width: 600px;"/></a></li>
-                <li><a href="/index.html">главная</a></li>
-                <li><a href="/image.jpg">внутренняя</a></li>
-                <li id = "myid"><a href="#myid">текущий фрагмент</a></li>
-                <li><a href="https://yandex.com/search/?text=%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8&lr=10466&msid=1758561086688377-10843530252929433515-balancer-l7leveler-kubr-yp-sas-85-BAL&search_source=yacom_desktop_common&suggest_reqid=729433515175856108610900125985961">
-				Туристические города России </a></li>
-                </ul>
+    <!-- Le reste du contenu main reste identique à ma réponse précédente -->
+    <main class="container my-4">
+        <div class="row g-4">
+            <!-- List Section -->
+            <section id="list-section" class="col-12 col-lg-4 order-1 order-lg-2">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Список гиперссылок</h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="http://kubsu.ru/" class="text-decoration-none">КубГУ</a></li>
+                            <li class="mb-2"><a href="https://kubsu.ru/" class="text-decoration-none">КубГУ</a></li>
+                            <li class="mb-2">
+                                <a href="https://kubsu.ru/">
+                                    <img src="image.jpg" alt="Цветок" class="img-fluid">
+                                </a>
+                            </li>
+                            <li class="mb-2"><a href="/index.html" class="text-decoration-none">главная</a></li>
+                            <li class="mb-2"><a href="/image.jpg" class="text-decoration-none">внутренняя</a></li>
+                            <li class="mb-2"><a href="#myid" class="text-decoration-none">текущий фрагмент</a></li>
+                            <li class="mb-2">
+                                <a href="https://yandex.com/search/?text=%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8&lr=10466" 
+                                   class="text-decoration-none">
+                                    Туристические города России
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            <section id="table-section">
-                <h2>Таблица</h2>
-                <table>
-                    <tr>
-                        <th>№</th>
-                        <th>Фамилия</th>
-                        <th>Имя</th>
-					    <th>Отчество</th>
-                        <th>Дата рождения</th>
-                        <th>Пол</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Иванов</td>
-                        <td>Алексей</td>
-					    <td>Петрович</td>
-                        <td>15.03.1985</td>
-					    <td>Муж</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Смирнова</td>
-                        <td>Екатерина</td>
-					    <td>Сергеевна</td>
-                        <td>30.01.1998</td>
-					    <td>Жен</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Кузнецов</td>
-                        <td>Дмитрий</td>
-					    <td>Иванрвич</td>
-                        <td>11.19.1982</td>
-					    <td>Муж</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Попова</td>
-                        <td>Олга</td>
-					    <td>Викторовна</td>
-                        <td>22.07.1992</td>
-					    <td>Жен</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Соколов</td>
-                        <td>Михаил</td>
-					    <td>Повлович</td>
-                        <td>04.11.1978</td>
-					    <td >Муж</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Волкова</td>
-                        <td>Анна</td>
-					    <td>Александровна</td>
-                        <td>25.05.1990</td>
-					    <td>Жен</td>
-                    </tr>
-                </table>
+            <!-- Table Section -->
+            <section id="table-section" class="col-12 col-lg-8 order-2 order-lg-1">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Таблица</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>№</th>
+                                        <th>Фамилия</th>
+                                        <th>Имя</th>
+                                        <th>Отчество</th>
+                                        <th>Дата рождения</th>
+                                        <th>Пол</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Иванов</td>
+                                        <td>Алексей</td>
+                                        <td>Петрович</td>
+                                        <td>15.03.1985</td>
+                                        <td>Муж</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Смирнова</td>
+                                        <td>Екатерина</td>
+                                        <td>Сергеевна</td>
+                                        <td>30.01.1998</td>
+                                        <td>Жен</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Кузнецов</td>
+                                        <td>Дмитрий</td>
+                                        <td>Иванович</td>
+                                        <td>19.11.1982</td>
+                                        <td>Муж</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Попова</td>
+                                        <td>Ольга</td>
+                                        <td>Викторовна</td>
+                                        <td>22.07.1992</td>
+                                        <td>Жен</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Соколов</td>
+                                        <td>Михаил</td>
+                                        <td>Павлович</td>
+                                        <td>04.11.1978</td>
+                                        <td>Муж</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Волкова</td>
+                                        <td>Анна</td>
+                                        <td>Александровна</td>
+                                        <td>25.05.1990</td>
+                                        <td>Жен</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="form-section">
-                <h2>Форма</h2>
-                <form action="/" method="post">
-                    <label>
-                         ФИО:<br/>
-                         <input name="field-name-1" value="Иванов Мария Петровна" />
-                    </label><br />
-                    <label>
-                        Номер телефона:<br />
-                        <input name="phone" value="+7-991-292-00-00" type="tel" placeholder="+79998543251" />
-                    </label><br />
-                    <label>
-                        Почта:<br />
-                        <input name="field-email" value="masha00@gmail.com" type="email" />
-                    </label><br />
-                    <label>
-                        Дата рождения:<br />
-                        <input name="field-date" value="2000-01-01" type="date" />
-                    </label><br />
-                    <label>
-                        Любимый язык программирования:<br />
-                        <select name="field-name-4[]"
-                            multiple="multiple">
-                            <option value="Значение1">Pascal</option>
-                            <option value="Значение2" selected="selected">C</option>
-                            <option value="Значение3" selected="selected">C++</option>
-		                    <option value="Значение4" selected="selected">JavaScript</option>
-		                    <option value="Значение5" selected="selected">PHP</option>
-		                    <option value="Значение6" selected="selected">Python</option>
-		                    <option value="Значение7" selected="selected">Java</option>
-		                    <option value="Значение8" selected="selected">Haskel</option>
-		                    <option value="Значение9" selected="selected">Clojure</option>
-		                    <option value="Значение10" selected="selected">Prolog</option>
-		                    <option value="Значение11" selected="selected">Scala</option>
-                        </select>
-                    </label><br />
-                        Пол: <br />
-                    <label>
-                        <input type="radio" checked="checked"
-                        name="radio-group-1" value="Значение1" />
-                        женский
-                    </label>
-                        <label><input type="radio"
-                        name="radio-group-1" value="Значение2" />
-                        мужской
-                    </label><br />
-                    Подпись:<br />
-                    <label><input type="checkbox" checked="checked"
-                        name="check-1" />
-                        С контрактом ознакомлен (а)</label><br />
 
-                        Если вы готовы, то нажмите сохранить:
-                        <input type="submit" value="Сохранить" />
-                    </label>
-                    <footer>
-                        <p>&copy; Сергей Синица</p>
-                    </footer>
-
-                </form>
+            <!-- Form Section -->
+            <section id="form-section" class="col-12 order-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Форма</h2>
+                        <form action="/" method="post" class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">ФИО:</label>
+                                <input type="text" name="field-name-1" class="form-control" 
+                                       value="Иванов Мария Петровна">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Номер телефона:</label>
+                                <input type="tel" name="phone" class="form-control" 
+                                       value="+7-991-292-00-00" placeholder="+79998543251">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Почта:</label>
+                                <input type="email" name="field-email" class="form-control" 
+                                       value="masha00@gmail.com">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Дата рождения:</label>
+                                <input type="date" name="field-date" class="form-control" 
+                                       value="2000-01-01">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Любимый язык программирования:</label>
+                                <select name="field-name-4[]" class="form-select" multiple>
+                                    <option value="Pascal">Pascal</option>
+                                    <option value="C" selected>C</option>
+                                    <option value="C++" selected>C++</option>
+                                    <option value="JavaScript" selected>JavaScript</option>
+                                    <option value="PHP" selected>PHP</option>
+                                    <option value="Python" selected>Python</option>
+                                    <option value="Java" selected>Java</option>
+                                    <option value="Haskel" selected>Haskel</option>
+                                    <option value="Clojure" selected>Clojure</option>
+                                    <option value="Prolog" selected>Prolog</option>
+                                    <option value="Scala" selected>Scala</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Пол:</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radio-group-1" 
+                                               id="female" value="женский" checked>
+                                        <label class="form-check-label" for="female">женский</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="radio-group-1" 
+                                               id="male" value="мужской">
+                                        <label class="form-check-label" for="male">мужской</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="check-1" 
+                                           id="agreement" checked>
+                                    <label class="form-check-label" for="agreement">
+                                        С контрактом ознакомлен(а)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </section>
-                
-            
-        </main>
-    </body>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-3 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; Сергей Синица 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
