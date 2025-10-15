@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #0e7bad;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    margin: 100px auto;
+    perspective: 1000px;
+}
+.form-section span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+.form-section{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #1154ac;
+    border: 1px solid #125fb8;
+    border-radius: 10px;
+    box-shadow: #109e34;
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+}
+form {
+    padding: 35px;
+}
+input[type="text"], select {
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+input[name]{
+    background-color: #ddd;
+    align-items: center;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
+    height: 40px;
+    border-radius: 10px ;
+    background-color: #ddd;
+    border-color: #000000;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #1154ac;
+}
+.price-section {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 8px ;
+}
+#result {
+    height: 30px;
+    background-color: #1154ac;
+    border: 2px solid #1154ac;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-top: 10px;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
