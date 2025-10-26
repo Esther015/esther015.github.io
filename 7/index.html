@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie d'images - Slider horizontal</title>
+    <title>Галерея изображений – Горизонтальный слайдер</title>
     <style>
         * {
             margin: 0;
@@ -122,7 +122,6 @@
             margin-left: 15px;
         }
 
-        /* Responsive styles */
         @media (max-width: 768px) {
             .gallery-slide {
                 flex: 0 0 50%;
@@ -152,13 +151,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Galerie d'images</h1>
+        <h1>Картинки</h1>
         
         <div class="gallery-container">
             <button class="gallery-nav prev" aria-label="Image précédente">&#10094;</button>
             
             <div class="gallery-track">
-                <!-- Les images seront ajoutées ici par JavaScript -->
+                
             </div>
             
             <button class="gallery-nav next" aria-label="Image suivante">&#10095;</button>
@@ -166,7 +165,7 @@
         
         <div class="pager">
             <div class="pager-dots">
-                <!-- Les points du pager seront ajoutés ici par JavaScript -->
+            
             </div>
             <div class="pager-text">
                 <span class="current-page">1</span> / <span class="total-pages">3</span>
@@ -176,10 +175,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Configuration de la galerie
             const galleryConfig = {
-                totalImages: 9, // Changé à 9 pour correspondre à vos images
-                visibleImages: 3, // Sur desktop
+                totalImages: 9,
+                visibleImages: 3,
                 currentPosition: 0,
                 imageWidth: 0,
                 track: null,
@@ -188,32 +186,24 @@
                 totalPagesElement: null
             };
 
-            // Initialisation de la galerie
             function initGallery() {
                 galleryConfig.track = document.querySelector('.gallery-track');
                 galleryConfig.pagerDots = document.querySelector('.pager-dots');
                 galleryConfig.currentPageElement = document.querySelector('.current-page');
                 galleryConfig.totalPagesElement = document.querySelector('.total-pages');
                 
-                // Créer les slides avec vos images
                 createSlides();
                 
-                // Calculer la largeur d'une image
                 updateImageWidth();
                 
-                // Créer les points du pager
                 createPagerDots();
-                
-                // Ajouter les écouteurs d'événements
+            
                 addEventListeners();
-                
-                // Mettre à jour l'affichage initial
+        
                 updateGallery();
             }
 
-            // Créer les slides avec vos images
             function createSlides() {
-                // Liste de vos images
                 const imageNames = [
                     'img1.png',
                     'img2.png',
@@ -231,7 +221,6 @@
                     slide.className = 'gallery-slide';
                     
                     const img = document.createElement('img');
-                    // Utilisation de vos images
                     img.src = imageNames[i];
                     img.alt = `Image ${i + 1}`;
                     
@@ -240,14 +229,12 @@
                 }
             }
 
-            // Mettre à jour la largeur d'image en fonction de l'écran
             function updateImageWidth() {
                 const slides = document.querySelectorAll('.gallery-slide');
                 if (slides.length > 0) {
                     galleryConfig.imageWidth = slides[0].getBoundingClientRect().width;
                 }
                 
-                // Ajuster le nombre d'images visibles selon la taille de l'écran
                 if (window.innerWidth <= 480) {
                     galleryConfig.visibleImages = 1;
                 } else if (window.innerWidth <= 768) {
@@ -256,16 +243,13 @@
                     galleryConfig.visibleImages = 3;
                 }
             }
-
-            // Créer les points du pager
+            
             function createPagerDots() {
                 const totalPages = Math.ceil(galleryConfig.totalImages / galleryConfig.visibleImages);
                 galleryConfig.totalPagesElement.textContent = totalPages;
                 
-                // Vider les points existants
                 galleryConfig.pagerDots.innerHTML = '';
                 
-                // Créer les nouveaux points
                 for (let i = 0; i < totalPages; i++) {
                     const dot = document.createElement('div');
                     dot.className = 'pager-dot';
@@ -279,13 +263,10 @@
                 }
             }
 
-            // Ajouter les écouteurs d'événements
             function addEventListeners() {
-                // Boutons de navigation
                 document.querySelector('.gallery-nav.prev').addEventListener('click', prevSlide);
                 document.querySelector('.gallery-nav.next').addEventListener('click', nextSlide);
                 
-                // Redimensionnement de la fenêtre
                 window.addEventListener('resize', function() {
                     updateImageWidth();
                     createPagerDots();
@@ -293,7 +274,6 @@
                 });
             }
 
-            // Aller à l'image précédente
             function prevSlide() {
                 if (galleryConfig.currentPosition > 0) {
                     galleryConfig.currentPosition--;
@@ -301,7 +281,6 @@
                 }
             }
 
-            // Aller à l'image suivante
             function nextSlide() {
                 const maxPosition = galleryConfig.totalImages - galleryConfig.visibleImages;
                 if (galleryConfig.currentPosition < maxPosition) {
@@ -310,27 +289,21 @@
                 }
             }
 
-            // Aller à une page spécifique
             function goToPage(pageIndex) {
                 galleryConfig.currentPosition = pageIndex * galleryConfig.visibleImages;
                 updateGallery();
             }
 
-            // Mettre à jour l'affichage de la galerie
             function updateGallery() {
-                // Déplacer la piste
                 galleryConfig.track.style.transform = `translateX(-${galleryConfig.currentPosition * galleryConfig.imageWidth}px)`;
                 
-                // Mettre à jour le pager
                 updatePager();
             }
 
-            // Mettre à jour le pager
             function updatePager() {
                 const currentPage = Math.floor(galleryConfig.currentPosition / galleryConfig.visibleImages);
                 const dots = document.querySelectorAll('.pager-dot');
                 
-                // Mettre à jour les points actifs
                 dots.forEach((dot, index) => {
                     if (index === currentPage) {
                         dot.classList.add('active');
@@ -339,11 +312,8 @@
                     }
                 });
                 
-                // Mettre à jour le texte du pager
                 galleryConfig.currentPageElement.textContent = currentPage + 1;
             }
-
-            // Initialiser la galerie
             initGallery();
         });
     </script>
