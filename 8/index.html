@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контактная форма</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* --- Base --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #7bdde8, #23a8b2, #0c8891);
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#openFormBtn {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    background: #ffffff;
+    color: #0c8891;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#openFormBtn:hover {
+    background: #c3c3c3;
+    transform: translateY(-2px);
+}
+
+/* --- MODAL --- */
+#modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#formContainer {
+    background: #ffffff;
+    width: 90%;
+    max-width: 500px;      
+    padding: 25px;         
+    border-radius: 14px;   
+    max-height: 90vh;      
+    overflow-y: auto;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    border-top: 6px solid #23a8b2;
+}
+
+@media (max-width: 600px) {
+    #formContainer {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        border-radius: 0;
+        border-top: none;
+    }
+}
+
+#formContainer h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0c8891;
+    font-weight: 700;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #23a8b2;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label.checkbox {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    background: #23a8b2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #0c8891;
+    transform: scale(1.02);
+}
+
+#closeBtn {
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    background: #eceff1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#closeBtn:hover {
+    background: #bcbfc2;
+}
+
+#statusMsg {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #00796b;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Добро пожаловать</h1>
+    <p>Свяжитесь с нами через форму обратной связи</p>
+    <button id="openFormBtn">Открыть форму</button>
+</header>
+
+<!-- POPUP -->
+<div id="modalOverlay">
+    <div id="formContainer">
+        <h2>Форма обратной связи</h2>
+
+        <form id="contactForm">
+            <input type="text" name="fullname" placeholder="ФИО" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Телефон">
+            <input type="text" name="organization" placeholder="Организация">
+            <textarea name="message" rows="4" placeholder="Сообщение" required></textarea>
+
+            <label class="checkbox">
+                <input type="checkbox" name="consent" required>
+                Согласие на обработку персональных данных
+            </label>
+
+            <button type="submit">Отправить</button>
+        </form>
+
+        <button id="closeBtn">Закрыть</button>
+        <p id="statusMsg"></p>
+    </div>
+</div>
+
+<script>
+// Elements
+const openBtn = document.getElementById("openFormBtn");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("modalOverlay");
+const form = document.getElementById("contactForm");
+const statusMsg = document.getElementById("statusMsg");
+
+// Show popup
+openBtn.onclick = () => {
+    overlay.style.display = "flex";
+    history.pushState({ formOpen: true }, "", "#contact");
+};
+
+// Hide popup
+closeBtn.onclick = closeForm;
+function closeForm() {
+    overlay.style.display = "none";
+    if (location.hash === "#contact") history.back();
+}
+
+// Close by clicking outside
+overlay.onclick = (e) => {
+    if (e.target === overlay) closeForm();
+};
+
+// Browser back button
+window.onpopstate = (e) => {
+    if (!e.state || !e.state.formOpen) overlay.style.display = "none";
+};
+
+// Save to localStorage
+form.addEventListener("input", () => {
+    const data = Object.fromEntries(new FormData(form));
+    localStorage.setItem("savedContactForm", JSON.stringify(data));
+});
+
+// Restore saved data
+window.onload = () => {
+    const saved = JSON.parse(localStorage.getItem("savedContactForm") || "{}");
+    for (let key in saved) {
+        if (form[key]) {
+            if (form[key].type === "checkbox") {
+                form[key].checked = saved[key] === "on";
+            } else {
+                form[key].value = saved[key];
+            }
+        }
+    }
+};
+
+// Submit form via AJAX
+form.onsubmit = async (e) => {
+    e.preventDefault();
+    statusMsg.textContent = "Отправка...";
+
+    const formData = new FormData(form);
+
+    try {
+        const res = await fetch("https://formcarry.com/s/LvZFpDJW8NI", {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: formData
+        });
+
+        if (res.ok) {
+            statusMsg.textContent = "Сообщение успешно отправлено!";
+            localStorage.removeItem("savedContactForm");
+            form.reset();
+        } else {
+            const err = await res.json();
+            statusMsg.textContent = "Ошибка: " + (err.message || "Ошибка сервера");
+        }
+    } catch {
+        statusMsg.textContent = "Ошибка соединения.";
+    }
+};
+</script>
+
+</body>
+</html>
