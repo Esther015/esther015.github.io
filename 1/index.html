@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Задача 3</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img id="logo-container" src="logosite.png" alt="Логотип" />
+            <div class="header-center">
+				 <div class="row d-flex mx-sm-m3">
+        <div class="col-md-9 order-2 px-sm-3">
+          <div class="h-100 py-3">
+          <main>
+            <h1>Задача 3</h1>
+          </main>
+          </div>
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="#list-section">Список гипессылок</a></li>
+                    <li><a href="#table-section">Таблица</a></li>
+                    <li><a href="#form-section">Форма</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!--Liste des liens hypertextes-->
+            <section id="list-section">
+                <h2>Список гиперссылок</h2>
+                <ul>
+                <li><a href="http://kubsu.ru/">КубГУ</a></li>
+                <li><a href="https://kubsu.ru/">КубГУ</a></li>
+                <li><a href="https://kubsu.ru/"><img src="image.jpg" alt="Цветок" style="width: 600px;"/></a></li>
+                <li><a href="/index.html">главная</a></li>
+                <li><a href="/image.jpg">внутренняя</a></li>
+                <li id = "myid"><a href="#myid">текущий фрагмент</a></li>
+                <li><a href="https://yandex.com/search/?text=%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8&lr=10466&msid=1758561086688377-10843530252929433515-balancer-l7leveler-kubr-yp-sas-85-BAL&search_source=yacom_desktop_common&suggest_reqid=729433515175856108610900125985961">
+				Туристические города России </a></li>
+                </ul>
+            </section>
+
+            <section id="table-section">
+                <h2>Таблица</h2>
+                <table>
+                    <tr>
+                        <th>№</th>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+					    <th>Отчество</th>
+                        <th>Дата рождения</th>
+                        <th>Пол</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Иванов</td>
+                        <td>Алексей</td>
+					    <td>Петрович</td>
+                        <td>15.03.1985</td>
+					    <td>Муж</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Смирнова</td>
+                        <td>Екатерина</td>
+					    <td>Сергеевна</td>
+                        <td>30.01.1998</td>
+					    <td>Жен</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Кузнецов</td>
+                        <td>Дмитрий</td>
+					    <td>Иванрвич</td>
+                        <td>11.19.1982</td>
+					    <td>Муж</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Попова</td>
+                        <td>Олга</td>
+					    <td>Викторовна</td>
+                        <td>22.07.1992</td>
+					    <td>Жен</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Соколов</td>
+                        <td>Михаил</td>
+					    <td>Повлович</td>
+                        <td>04.11.1978</td>
+					    <td >Муж</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Волкова</td>
+                        <td>Анна</td>
+					    <td>Александровна</td>
+                        <td>25.05.1990</td>
+					    <td>Жен</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="form-section">
+                <h2>Форма</h2>
+                <form action="/" method="post">
+                    <label>
+                         ФИО:<br/>
+                         <input name="field-name-1" value="Иванов Мария Петровна" />
+                    </label><br />
+                    <label>
+                        Номер телефона:<br />
+                        <input name="phone" value="+7-991-292-00-00" type="tel" placeholder="+79998543251" />
+                    </label><br />
+                    <label>
+                        Почта:<br />
+                        <input name="field-email" value="masha00@gmail.com" type="email" />
+                    </label><br />
+                    <label>
+                        Дата рождения:<br />
+                        <input name="field-date" value="2000-01-01" type="date" />
+                    </label><br />
+                    <label>
+                        Любимый язык программирования:<br />
+                        <select name="field-name-4[]"
+                            multiple="multiple">
+                            <option value="Значение1">Pascal</option>
+                            <option value="Значение2" selected="selected">C</option>
+                            <option value="Значение3" selected="selected">C++</option>
+		                    <option value="Значение4" selected="selected">JavaScript</option>
+		                    <option value="Значение5" selected="selected">PHP</option>
+		                    <option value="Значение6" selected="selected">Python</option>
+		                    <option value="Значение7" selected="selected">Java</option>
+		                    <option value="Значение8" selected="selected">Haskel</option>
+		                    <option value="Значение9" selected="selected">Clojure</option>
+		                    <option value="Значение10" selected="selected">Prolog</option>
+		                    <option value="Значение11" selected="selected">Scala</option>
+                        </select>
+                    </label><br />
+                        Пол: <br />
+                    <label>
+                        <input type="radio" checked="checked"
+                        name="radio-group-1" value="Значение1" />
+                        женский
+                    </label>
+                        <label><input type="radio"
+                        name="radio-group-1" value="Значение2" />
+                        мужской
+                    </label><br />
+                    Подпись:<br />
+                    <label><input type="checkbox" checked="checked"
+                        name="check-1" />
+                        С контрактом ознакомлен (а)</label><br />
+
+                        Если вы готовы, то нажмите сохранить:
+                        <input type="submit" value="Сохранить" />
+                    </label>
+                    <footer>
+                        <p>&copy; Сергей Синица</p>
+                    </footer>
+
+                </form>
+            </section>
+                
+            
+        </main>
+    </body>
+</html>
+
