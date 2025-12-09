@@ -1,0 +1,65 @@
+<section id="tarif-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-8">
+                    <!-- Заголовок и подзаголовок по левому краю -->
+                    <div class="mb-4 col-lg-8 col-xl-6 px-0">
+					<div id="support" >
+                        
+						<div class = "row">
+                            <div id = "tarif1" class = "col-10 col-lg-4">
+                               <div class="tarif-title1">Стартовый  </div>
+								<div class="tarif-text1">
+									<div class="list">
+										<ul>Консултации и работы по SEO </ul>
+										<ul> Услуги дизайнера</ul>
+										<ul> Неиспользованные оплаченные часы перносятся на следующий месяц</ul>
+										<ul> Предоплата от 6 000 рублей в месяц </ul>
+									</div>
+								<div class="button">
+									СВЯЖИТЕСЬ С НАМИ!
+								</div>
+								</div>
+							</div>
+                            
+						</div>
+						<div class = "row">
+                            <div id = "tarif1" class = "col-10 col-lg-4">
+                               <div class="tarif-title1"> Бизнес </div>
+								<div class="tarif-text1">
+									<div class="list">
+										<ul> Консултации и работы по SEO </ul>
+										<ul> Услуги дизайнера </ul>
+										<ul> Высокое время реакции - до рабочих дней </ul>
+										<ul> Неиспользованные оплаченные часы не переносятся </ul>
+										<ul> Предоплата от 30 000 рублей в месяц </ul>
+									</div>
+									<div class="button">
+										СВЯЖИТЕСЬ С НАМИ!
+									</div>
+								</div>
+                            </div>
+						</div>
+						<div class = "row">
+                            <div id = "tarif1" class = "col-10 col-lg-4">
+								<div class="tarif-title1">VIP </div>
+								<div class="tarif-text1">
+									<div class="list">
+										<ul> Консултации и работы по SEO</ul>
+										<ul> Услуги дизайнера </ul>
+										<ul> Неиспользованные оплаченные часы не переносятся </ul>
+										<ul> Предоплата от 270 000 рублей в месяц </ul>
+									</div>
+									<div class="button">
+										СВЯЖИТЕСЬ С НАМИ!
+									</div>
+								</div>
+                            </div>
+						</div>
+
+                    </div>
+                    </div>
+                </div>    
+            </div>
+        </div>    
+    </section>
