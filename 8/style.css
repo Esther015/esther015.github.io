@@ -1,0 +1,150 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #7bdde8, #23a8b2, #0c8891);
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#openFormBtn {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    background: #ffffff;
+    color: #0c8891;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#openFormBtn:hover {
+    background: #c3c3c3;
+    transform: translateY(-2px);
+}
+
+/* --- MODAL --- */
+#modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#formContainer {
+    background: #ffffff;
+    width: 90%;
+    max-width: 500px;      
+    padding: 25px;         
+    border-radius: 14px;   
+    max-height: 90vh;      
+    overflow-y: auto;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    border-top: 6px solid #23a8b2;
+}
+
+@media (max-width: 600px) {
+    #formContainer {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        border-radius: 0;
+        border-top: none;
+    }
+}
+
+#formContainer h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0c8891;
+    font-weight: 700;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #23a8b2;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label.checkbox {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    background: #23a8b2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #0c8891;
+    transform: scale(1.02);
+}
+
+#closeBtn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background: #eceff1;;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#closeBtn:hover {
+    background: #bcbfc2;
+}
+
+#statusMsg {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #00796b;
+}
