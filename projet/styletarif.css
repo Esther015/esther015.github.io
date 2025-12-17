@@ -96,7 +96,7 @@
     margin-top: 60px;
     font-size: 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
 
     .tarif-case {
         flex-direction: column;   /* empile les cartes */
