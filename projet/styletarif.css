@@ -98,16 +98,10 @@
 }
 
 @media (max-width: 768px) {
-
-    .tarif-case {
-        flex-direction: column;   /* empile les tarifs */
-        gap: 20px;
-        padding: 0 20px;
-    }
-
     .tarif1,
     .tarif2,
     .tarif3 {
-        width: 100%;              /* un tarif par ligne */
+        min-height: 85vh;
     }
 }
+
