@@ -96,12 +96,29 @@
     margin-top: 60px;
     font-size: 15px;
 }
-
 @media (max-width: 768px) {
+
+    .tarif-case {
+        flex-direction: column;   /* empile les cartes */
+        gap: 24px;
+        padding: 0 16px;
+    }
+
     .tarif1,
     .tarif2,
     .tarif3 {
-        min-height: 85vh;
+        width: 100%;              /* pleine largeur */
+        transform: none !important; /* supprime le zoom */
+        box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Désactiver les effets hover sur mobile */
+    .tarif1:hover,
+    .tarif2:hover,
+    .tarif3:hover {
+        transform: none;
+        box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
     }
 }
+
 
