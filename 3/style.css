@@ -23,10 +23,6 @@ header {
     justify-content: space-between;
     position: relative; 
 }
-header nav {
-    margin-left: auto;
-    font-size: 15px;
-}
 #logo-container {
     width: 80px; 
     height: 80px;
@@ -44,6 +40,10 @@ header nav {
 .logo-img {
     background-color: #67d7d7;
     border: 3px solid white;
+}
+header nav {
+    margin-left: auto;
+    font-size: 15px;
 }
 header nav ul{
     list-style: none;
