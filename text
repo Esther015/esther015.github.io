@@ -1,0 +1,5 @@
+
+Warning: Undefined variable $contract in /home/u82384/www/Web-2s/lab5/index.php on line 193
+
+Warning: Undefined variable $contract in /home/u82384/www/Web-2s/lab5/index.php on line 253
+Erreur lors de l'enregistrement : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'contract' cannot be null
